@@ -12,16 +12,20 @@ let wordCounterStructure = {
             let inputContainer = wordCounterProperties.project.container.inputContainer.element;
             let outputContainer = wordCounterProperties.project.container.outputContainer.element;
             let content = inputContainer.textContent;
-            content = content.replace(/[^a-zA-Z ]/g, '');
+            let count = 0;
+            content = content.replace(/[^a-zA-Z ]/g, ' ');
             content = content.split(' ');
-            console.log(content);
-            let count = content.length;
+            content.forEach((word) => {
+                if (word !== '') {
+                    count += 1;
+                }
+            });
             outputContainer.textContent = `Word Count: ${count} word(s)`;
         },
         'Remove Text': function removeText() {
             let inputContainer = wordCounterProperties.project.container.inputContainer.element;
             inputContainer.textContent = '';
-            wordCounterStructure.buttons['Count Letters']();
+            wordCounterStructure.buttons['Count Words']();
         }
     }
 }
