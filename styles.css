@@ -1,0 +1,49 @@
+body {
+    height: 100%;
+}
+h3 {
+    width: 517px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0px;
+    text-align: center;
+}
+.container {
+    position: relative;
+    border-style: solid;
+    border-width: 3px;
+    width: 500px;
+    height: 500px;
+}
+.io-container {
+    position: relative;
+    width: 500px;
+    height: 500px;
+}
+.io-container-subcontainer {
+    width: 500px;
+    height: 250px;
+    border-style: solid;
+    border-width: 3px;
+}
+#letter-counter-input-container {
+    word-wrap: break-word;
+    overflow-y: scroll;
+}
+#projects {
+    display: flex;
+}
+.navigation-bar {
+    width: 500px;
+}
+button {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.balls {
+    z-index:4;
+    position: absolute;
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+}
